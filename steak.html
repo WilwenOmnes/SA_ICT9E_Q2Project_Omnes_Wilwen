@@ -1,0 +1,289 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try it to Believe EAT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navbar.css">
+  <style>
+    .navbar-toggler-icon {
+      background-color: black;
+      width: 30px;
+      height: 3px;
+      border-radius: 3px;
+      position: relative;
+    }
+
+    .navbar-toggler-icon::before, .navbar-toggler-icon::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: black;
+      border-radius: 3px;
+    }
+
+    .navbar-toggler-icon::before {
+      top: -8px;
+    }
+
+    .navbar-toggler-icon::after {
+      top: 8px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      height: auto;
+      padding: 10px 0;
+      background-color: #ffc107;
+    }
+
+    .navbar-collapse {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      transition: max-height 0.5s ease-in-out;
+      background-color: #ffc107;
+      width: 100vw;
+      z-index: 1;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        top: 60px;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 10px 0;
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    .navbar-nav .nav-item {
+      margin: 0 15px;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 10px 0;
+      }
+    }
+
+    .form-control {
+      max-width: 200px;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-nav .nav-link {
+      margin-right: px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-margin: 20px;
+      vertical-align: auto;
+    }
+
+    .hero {
+      margin-top: 80px;
+    }
+
+    #me {
+      z-index: 2;
+    }
+
+    #title {
+      z-index: 2;
+    }
+
+    #search {
+      margin-right: 125px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer p strong {
+      color: #e0a800;
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        padding: 15px 0;
+      }
+    }
+
+    main {
+      margin: 40px 0;
+      background-color: darkgray;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: black;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section p {
+      font-size: 1rem;
+      color: #495057;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 1rem;
+      color: #495057;
+      margin-bottom: 10px;
+    }
+
+    li i {
+      color: #f8a945;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+      <div class="container d-flex justify-content-between">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img id="me" src="EATlogo.jpg" alt="Try it to Believe EAT" class="me-2">
+          <span id="title" class="fw-bold text-dark">Try it to Believe EAT</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="submit-recipe.html">Submit Recipe</a>
+            </li>
+            <li class="nav-item">
+              <form class="d-flex mt-2 mt-lg-0">
+                <input id="search"class="form-control" type="search" placeholder="Search" aria-label="Search">
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <div class="bg-dark text-white p-4 rounded shadow-lg border border-white">
+      <h2 class="text-center text-warning mb-4">Steak Recipe</h2>
+
+      <div class="row">
+        <div class="col-md-6 mb-4 d-flex align-items-stretch">
+          <div class="bg-secondary p-4 rounded shadow-sm w-100">
+            <img src="Steak.jpg" alt="Steak" class="img-fluid rounded h-100 w-100 object-fit-cover">
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4 d-flex align-items-stretch">
+          <div class="bg-secondary text-white p-4 rounded shadow-sm w-100">
+            <h3 class="text-warning">Ingredients</h3>
+            <table class="table table-light table-striped">
+              <tbody>
+                <tr>
+                  <td>2 ribeye steaks (about 1 inch thick)</td>
+                </tr>
+                <tr>
+                  <td>2 tbsp olive oil</td>
+                </tr>
+                <tr>
+                  <td>2 cloves garlic (minced)</td>
+                </tr>
+                <tr>
+                  <td>1 tbsp fresh thyme or rosemary (optional)</td>
+                </tr>
+                <tr>
+                  <td>Salt and freshly ground black pepper (to taste)</td>
+                </tr>
+                <tr>
+                  <td>1 tbsp butter (optional)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 class="text-warning">Procedure</h3>
+            <ol>
+              <li class="text-white">Take the steaks out of the fridge and let them come to room temperature for about 20-30 minutes.</li>
+              <li class="text-white">Heat the olive oil in a large skillet over medium-high heat.</li>
+              <li class="text-white">Season both sides of the steaks with salt and pepper.</li>
+              <li class="text-white">Once the pan is hot, add the steaks and sear for 3-4 minutes on each side, or until desired doneness is achieved.</li>
+              <li class="text-white">During the last minute of cooking, add the minced garlic and herbs (optional), and spoon the infused oil over the steaks for extra flavor.</li>
+              <li class="text-white">Remove the steaks from the pan and let them rest for 5 minutes before serving.</li>
+              <li class="text-white">Optional: Top the steaks with butter for a richer taste.</li>
+              <li class="text-white">Serve with your choice of sides and enjoy your perfectly cooked steak!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
